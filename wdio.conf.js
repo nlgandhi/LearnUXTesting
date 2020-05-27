@@ -53,6 +53,7 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+        browserVersion: '79.0', // browser version
         // browserName: 'firefox',
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -90,7 +91,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://realtor.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
