@@ -7,22 +7,32 @@
 // Deploy this code to a Docker container (AWS Instance).
 // ----------------------------------------------------------------------------------------------------------------------  
 describe('Home Page e2e tests', () => {
-    it('Check if the Trends section exists', () => {
-
-        // browser.url('https://realtor.com')
+    
+    it('should have the right title', () => {
         browser.url('')
-        const elem = $('.news-headline'); // Get the element from using the class
-        expect(elem.getText()).toEqual('The Most Popular Homes of the Week'); //        
+        const title = browser.getTitle()
+        expect(browser).toHaveTitle('Homes for Sale, Mortgage Rates, Virtual Tours & Rentals | realtor.com®');
     })
 
     it('should go to rentals page', () => {
-        // browser.url('https://realtor.com')
         browser.url('')
         const rentalsLink = $('[href="/rentals"]');
         rentalsLink.click(); // Click on the link
         const title = browser.getTitle(); // Get the tittle for the new page.
         expect(title).toEqual('Apartments for Rent, Condos and Home Rentals | Rental Home Property Search | realtor.com®');
     });
+
+    /*
+    it('Find Your Neighborhood section exists', () => {
+        browser.url('')
+        const elem  = $('jsx-3406475629');
+        // const elem  = $('jsx-3406475629 headline-secondary');        
+        console.log(elem.getText());
+        expect(elem.getText()).toEqual('Find Your Neighborhood');         
+    });
+    */
+
+
 
 })
 
